@@ -1,20 +1,94 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            <strong>RGB Controller</strong>
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large" class="ion-text-center">RGB Controller</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div id="container">
+        <strong>COLOR</strong>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="redBtn" (click)="sendRequest('color/red')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="greenBtn" (click)="sendRequest('color/green')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="blueBtn" (click)="sendRequest('color/blue')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="orangeBtn" (click)="sendRequest('color/orange')"></ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="yellowBtn" (click)="sendRequest('color/yellow')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="chartrueseBtn" (click)="sendRequest('color/chartruese')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="springGreenBtn" (click)="sendRequest('color/springGreen')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="cyanBtn" (click)="sendRequest('color/cyan')"></ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="azureBtn" (click)="sendRequest('color/azure')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="violetBtn" (click)="sendRequest('color/violet')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="magentaBtn" (click)="sendRequest('color/magenta')"></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" id="roseBtn" (click)="sendRequest('color/rose')"></ion-button>
+                </ion-col>
+            </ion-row>
+
+            <strong>MODE</strong>
+            <ion-row>
+                <ion-col col-3>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('pattern/on')"><strong>ON</strong></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('pattern/rainbow')"><strong>Rainbow</strong></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('pattern/blink')"><strong>Blink</strong></ion-button>
+                </ion-col>
+                <ion-col col-3>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('pattern/fade')"><strong>Fade</strong></ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('mode/temperature')"><strong>Temperature</strong></ion-button>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-button class="color-btn" color="primary" (click)="sendRequest('off')"><strong>OFF</strong></ion-button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-12>
+                    <ion-input placeholder="Host name..." class="color-btn" id="hostInput" type="text" [(ngModel)]="hostInput">
+                    </ion-input>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>
