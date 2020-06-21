@@ -12,8 +12,6 @@ import { retry, catchError } from "rxjs/operators";
   providedIn: "root",
 })
 export class ApiService {
-  // base_path = "http://192.168.0.14:80/";
-
   constructor(private http: HttpClient) {}
 
   request(route: string) {
